@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@theme {
+	/* brand colors */
+	--color-brand-dark: #070a00;
+	--color-brand-navdark: #111316;
+	--color-brand-light-green: #c4c9ac;
+	--color-brand-dark-green: #c3f400;
+	--color-brand-text-green: #111316;
+	--color-brand-light-blue: #00eefc;
+
+	/*Map the background and foreground to brand colors */
+	--color-background: var(--color-brand-dark);
+	--color-foreground: var(--color-brand-green);
+}
+
+body {
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+	margin: 0;
+}
