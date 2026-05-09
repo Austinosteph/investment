@@ -2,6 +2,7 @@
 import { FeatureCards } from '@/components/feature-cards';
 import InvestmentPlans from '@/components/investment-plans';
 import Footer from '@/components/footer';
+import Link from 'next/link';
 
 const chartData = [
 	{ name: 'Jan', value: 45 },
@@ -42,12 +43,18 @@ export default function Home() {
 						</p>
 						{/* Buttons */}
 						<div className="flex flex-col sm:flex-wrap sm:flex-row gap-3 sm:gap-4 pt-4">
-							<button className="w-full sm:w-auto px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-all hover:shadow-lg hover:scale-105 bg-brand-dark-green text-brand-text-green">
+							<Link
+								href="/signup"
+								className="w-full sm:w-auto px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-all hover:shadow-lg hover:scale-105 bg-brand-dark-green text-brand-text-green"
+							>
 								Start Investing
-							</button>
-							<button className="w-full sm:w-auto px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-all hover:scale-105 text-brand-light-blue border-2 border-brand-light-blue">
+							</Link>
+							<Link
+								href="/login"
+								className="w-full sm:w-auto px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-all hover:scale-105 text-brand-light-blue border-2 border-brand-light-blue"
+							>
 								Login
-							</button>
+							</Link>
 						</div>
 					</div>
 					{/* Right Section - Chart */}
