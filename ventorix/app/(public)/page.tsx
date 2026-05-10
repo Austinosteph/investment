@@ -45,13 +45,13 @@ export default function Home() {
 						<div className="flex flex-col sm:flex-wrap sm:flex-row gap-3 sm:gap-4 pt-4">
 							<Link
 								href="/signup"
-								className="w-full sm:w-auto px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-all hover:shadow-lg hover:scale-105 bg-brand-dark-green text-brand-text-green"
+								className="w-full text-center sm:w-auto px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-all hover:shadow-lg hover:scale-105 bg-brand-dark-green text-brand-text-green"
 							>
 								Start Investing
 							</Link>
 							<Link
 								href="/login"
-								className="w-full sm:w-auto px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-all hover:scale-105 text-brand-light-blue border-2 border-brand-light-blue"
+								className="w-full text-center sm:w-auto px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-all hover:scale-105 text-brand-light-blue border-2 border-brand-light-blue"
 							>
 								Login
 							</Link>
@@ -71,11 +71,11 @@ export default function Home() {
 								<p className="text-xs font-medium tracking-widest uppercase text-brand-light-green mb-2">
 									Global Portfolio Index
 								</p>
-								<div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-3 justify-between">
+								<div className="flex flex-row justify-between gap-2 sm:gap-3">
 									<h2 className="text-2xl sm:text-3xl font-bold text-white">
 										$428,901.00
 									</h2>
-									<span className="flex items-center gap-1 px-3 py-1 rounded-lg text-brand-dark-green border border-brand-light-green bg-brand-dark-green/15">
+									<span className="flex gap-1 px-3 py-1 rounded-lg text-brand-dark-green border border-brand-light-green bg-brand-dark-green/15">
 										<span className="font-semibold text-xs sm:text-sm">
 											+12.4%
 										</span>

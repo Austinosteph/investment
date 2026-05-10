@@ -8,7 +8,7 @@ export default function SignupPage() {
 			style={{ backgroundImage: "url('/authbg.jpg')" }}
 		>
 			{/* Main Content */}
-			<main className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 xl:py-20 bg-brand-dark/95">
+			<main className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 xl:py-20 bg-brand-dark/90">
 				<div className="w-full max-w-sm sm:max-w-md lg:max-w-lg">
 					{/* Encrypted Session Badge */}
 					<div className="flex justify-center mb-4 sm:mb-6 lg:mb-8">

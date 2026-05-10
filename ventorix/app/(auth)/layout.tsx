@@ -1,4 +1,4 @@
-import Footer from '@/components/footer';
+import FooterAuth from '@/components/footerauth';
 import AuthNavbar from '@/components/navbars/AuthNavbar';
 
 export default function RootLayout({
@@ -10,7 +10,7 @@ export default function RootLayout({
 		<>
 			<AuthNavbar />
 			{children}
-			<Footer />
+			<FooterAuth />
 		</>
 	);
 }

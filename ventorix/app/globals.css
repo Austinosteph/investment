@@ -1,4 +1,8 @@
 @import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
 
 @theme {
 	/* brand colors */
@@ -9,13 +13,72 @@
 	--color-brand-text-green: #111316;
 	--color-brand-light-blue: #00eefc;
 
-	/*Map the background and foreground to brand colors */
+	/* Map background and foreground to brand colors */
 	--color-background: var(--color-brand-dark);
-	--color-foreground: var(--color-brand-green);
+	--color-foreground: var(--color-brand-light-green);
 }
 
 body {
 	background-color: var(--color-background);
 	color: var(--color-foreground);
 	margin: 0;
+}
+
+/* Replace shadcn's colors with your brand colors */
+:root {
+	/* Your brand colors as main colors */
+	--background: #070a00;
+	--foreground: #c4c9ac;
+	--card: #111316;
+	--card-foreground: #c4c9ac;
+	--border: #c4c9ac;
+	--input: #111316;
+	--primary: #c3f400;
+	--primary-foreground: #111316;
+	--secondary: #070a00;
+	--secondary-foreground: #c4c9ac;
+	--muted: #111316;
+	--muted-foreground: #c4c9ac;
+	--accent: #c3f400;
+	--accent-foreground: #111316;
+	--destructive: #ef4444;
+	--ring: #c3f400;
+
+	/* Sidebar colors */
+	--sidebar: #111316;
+	--sidebar-foreground: #c4c9ac;
+	--sidebar-primary: #c3f400;
+	--sidebar-primary-foreground: #111316;
+	--sidebar-accent: #111316;
+	--sidebar-accent-foreground: #c4c9ac;
+	--sidebar-border: #c4c9ac;
+	--sidebar-ring: #c3f400;
+
+	/* Chart colors */
+	--chart-1: #c3f400;
+	--chart-2: #00eefc;
+	--chart-3: #c4c9ac;
+	--chart-4: #111316;
+	--chart-5: #070a00;
+
+	--radius: 0.625rem;
+}
+
+@theme inline {
+	--font-heading: var(--font-sans);
+	--font-sans: var(--font-sans);
+}
+
+@layer base {
+	* {
+		border-color: var(--border);
+		outline-color: var(--ring);
+	}
+	body {
+		background-color: var(--background);
+		color: var(--foreground);
+	}
+	html {
+		font-family: var(--font-sans);
+	}
 }
