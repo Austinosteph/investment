@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Eye, EyeOff, Lock, Mail, ArrowRight } from 'lucide-react';
 
 export function LoginForm() {
@@ -8,13 +9,17 @@ export function LoginForm() {
 	const [password, setPassword] = useState('');
 	const [showPassword, setShowPassword] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
+	const router = useRouter();
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		setIsLoading(true);
+
 		// Simulate login request
 		setTimeout(() => {
 			setIsLoading(false);
+			// Redirect to dashboard after successful login
+			router.push('/dashboard');
 		}, 1000);
 	};
 
@@ -91,8 +96,14 @@ export function LoginForm() {
 					disabled={isLoading}
 					className="w-full bg-brand-dark-green text-lg sm:text-2xl text-black font-semibold py-3 sm:py-4 px-4 rounded-lg hover:opacity-90 disabled:opacity-50 flex items-center justify-center gap-2 mt-6 sm:mt-8 transition-all hover:scale-105 min-h-11"
 				>
-					Login
-					<ArrowRight className="h-4 w-4" />
+					{isLoading ? (
+						<div className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
+					) : (
+						<>
+							Login
+							<ArrowRight className="h-4 w-4" />
+						</>
+					)}
 				</button>
 			</form>
 

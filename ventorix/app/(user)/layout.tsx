@@ -6,14 +6,14 @@ export default function DashboardLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<div className="flex bg-neutral-950 min-h-screen">
+		<div className="flex bg-neutral-950 h-screen">
 			{/* Sidebar - Hidden on mobile, visible on lg+ */}
 			<div className="hidden lg:block">
 				<Sidebar />
 			</div>
 
 			{/* Main Content Area */}
-			<div className="flex-1 flex flex-col">{children}</div>
+			<div className="flex-1 flex flex-col overflow-hidden">{children}</div>
 		</div>
 	);
 }

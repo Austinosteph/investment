@@ -43,7 +43,7 @@ export function Sidebar() {
 	const pathname = usePathname();
 
 	return (
-		<aside className="bg-neutral-950 w-48 min-h-screen border-r border-neutral-800 p-4 flex flex-col">
+		<aside className="bg-brand-navdark w-48 h-screen border-r border-brand-navdark p-4 flex flex-col">
 			{/* Logo */}
 			<div className="mb-8">
 				<h1 className="text-2xl font-bold text-white">VENTORIX</h1>
@@ -68,8 +68,8 @@ export function Sidebar() {
 							href={item.href}
 							className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm font-medium ${
 								isActive
-									? 'bg-lime-400 text-neutral-950'
-									: 'text-neutral-400 hover:text-white hover:bg-neutral-900'
+									? 'bg-brand-dark-green text-brand-text-green'
+									: 'text-brand-light-green hover:text-white hover:bg-brand-light-green/10'
 							}`}
 						>
 							<Icon className="w-4 h-4" />
@@ -79,7 +79,7 @@ export function Sidebar() {
 				})}
 			</nav>
 
-			{/* Footer */}
+			{/* Footer - Always at bottom */}
 			<div className="border-t border-neutral-800 pt-4 mt-auto text-xs text-neutral-500">
 				<div className="text-center">
 					<span>SEC REGULATED</span>
