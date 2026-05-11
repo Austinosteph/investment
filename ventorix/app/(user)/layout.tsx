@@ -8,7 +8,7 @@ export default function DashboardLayout({
 	return (
 		<div className="flex bg-neutral-950 h-screen">
 			{/* Sidebar - Hidden on mobile, visible on lg+ */}
-			<div className="hidden lg:block">
+			<div className="hidden md:block">
 				<Sidebar />
 			</div>
 
