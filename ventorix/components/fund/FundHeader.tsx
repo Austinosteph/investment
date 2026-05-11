@@ -36,7 +36,7 @@ export function FundHeader() {
 			{/* Metrics Cards Grid */}
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 				{/* Total Value */}
-				<div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
+				<div className="bg-brand-light-green/5 rounded-lg p-6 border border-brand-light-green">
 					<div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
 						Total Value
 					</div>
@@ -48,7 +48,7 @@ export function FundHeader() {
 				</div>
 
 				{/* Projected APR */}
-				<div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
+				<div className=" bg-brand-light-green/5 rounded-lg p-6 border border-brand-light-green">
 					<div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
 						Projected APR
 					</div>
@@ -57,7 +57,7 @@ export function FundHeader() {
 				</div>
 
 				{/* Days Remaining */}
-				<div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
+				<div className="bg-brand-light-green/5 rounded-lg p-6 border border-brand-light-green">
 					<div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
 						Days Remaining
 					</div>
@@ -66,7 +66,7 @@ export function FundHeader() {
 				</div>
 
 				{/* Risk Score */}
-				<div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
+				<div className="bg-brand-light-green/5 rounded-lg p-6 border border-brand-light-green">
 					<div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
 						Risk Score
 					</div>

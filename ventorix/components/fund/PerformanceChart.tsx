@@ -25,7 +25,7 @@ const data = [
 
 export function PerformanceChart() {
 	return (
-		<div className="bg-gray-900 rounded-lg p-8 border border-gray-800">
+		<div className="bg-brand-light-green/5 rounded-lg p-8 border border-brand-light-green">
 			{/* Header */}
 			<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
 				<div>

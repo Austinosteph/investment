@@ -6,7 +6,7 @@ export function MilestoneSection() {
 	return (
 		<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 			{/* Alpha Deviation */}
-			<div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
+			<div className="bg-brand-light-green/5 rounded-lg p-6 border border-brand-light-green">
 				<h3 className="text-lg font-bold text-white mb-6">Alpha Deviation</h3>
 
 				<div className="space-y-4">
@@ -42,7 +42,7 @@ export function MilestoneSection() {
 			</div>
 
 			{/* Roadmap Milestones */}
-			<div className="bg-gray-900 rounded-lg p-6 border border-gray-800">
+			<div className="bg-brand-light-green/5 rounded-lg p-6 border border-brand-light-green">
 				<h3 className="text-lg font-bold text-white mb-6">
 					Roadmap Milestones
 				</h3>
