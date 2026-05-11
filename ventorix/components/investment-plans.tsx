@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { CircleCheck } from 'lucide-react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 type PricingPlan = {
 	name: string;
@@ -76,6 +77,7 @@ const PLANS: PricingPlan[] = [
 
 export default function InvestmentPlans() {
 	const [isAnnual, setIsAnnual] = useState(true);
+	const router = useRouter();
 
 	return (
 		<div className="w-full text-white">
@@ -200,6 +202,9 @@ export default function InvestmentPlans() {
 
 								{/* CTA Button */}
 								<button
+									onClick={() => {
+										router.push('/login');
+									}}
 									className={`w-full py-3 rounded-lg font-bold transition-all text-sm sm:text-base hover:scale-105 ${
 										plan.highlighted
 											? 'bg-brand-dark-green text-black hover:bg-brand-dark-green/80'

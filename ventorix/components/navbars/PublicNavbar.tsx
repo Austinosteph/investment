@@ -37,12 +37,9 @@ export const PublicNavbar = () => {
 			</Link>
 
 			{/* Desktop Navigation - Hidden on Tablet/Mobile */}
-			<div className="hidden lg:flex gap-6 text-brand-light-green text-sm xl:text-base">
-				<Link className="hover:text-white hover:font-bold" href="/home">
-					Home
-				</Link>
-				<Link className="hover:text-white hover:font-bold " href="/invest">
-					Invest
+			<div className="hidden lg:flex gap-12 text-brand-light-green text-sm xl:text-base">
+				<Link className="hover:text-white hover:font-bold " href="/plans">
+					Plans
 				</Link>
 				<Link className="hover:text-white hover:font-bold" href="/market">
 					Market
@@ -74,17 +71,10 @@ export const PublicNavbar = () => {
 					<div className="flex flex-col p-4 space-y-2 sm:space-y-3">
 						<Link
 							className="text-brand-light-green hover:text-white hover:font-bold py-2 text-sm sm:text-base"
-							href="/home"
+							href="/plans"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
-							Home
-						</Link>
-						<Link
-							className="text-brand-light-green hover:text-white hover:font-bold py-2 text-sm sm:text-base"
-							href="/invest"
-							onClick={() => setIsMobileMenuOpen(false)}
-						>
-							Invest
+							Plans
 						</Link>
 						<Link
 							className="text-brand-light-green hover:text-white hover:font-bold py-2 text-sm sm:text-base"
