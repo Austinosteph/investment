@@ -6,9 +6,9 @@ import { usePathname } from 'next/navigation';
 import {
 	LayoutDashboard,
 	TrendingUp,
-	CheckCircle,
 	Activity,
 	History,
+	User,
 } from 'lucide-react';
 
 const menuItems = [
@@ -22,11 +22,7 @@ const menuItems = [
 		href: '/invest',
 		icon: TrendingUp,
 	},
-	{
-		name: 'Active',
-		href: '/active',
-		icon: CheckCircle,
-	},
+
 	{
 		name: 'Progress',
 		href: '/progress',
@@ -36,6 +32,11 @@ const menuItems = [
 		name: 'Transactions',
 		href: '/transactions',
 		icon: History,
+	},
+	{
+		name: 'Profile',
+		href: '/profile',
+		icon: User,
 	},
 ];
 

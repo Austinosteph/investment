@@ -85,7 +85,7 @@ function InvestmentModal({ isOpen, tier, onClose }: InvestmentModalProps) {
 
 	return (
 		<div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4">
-			<div className="bg-[#1a1a1a] border border-[#333] rounded-xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
+			<div className="border border-brand-light-green rounded-xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
 				{/* Modal Header */}
 				<div className="flex items-center justify-between p-4 sm:p-6 border-b border-[#333]">
 					<div>
@@ -110,7 +110,7 @@ function InvestmentModal({ isOpen, tier, onClose }: InvestmentModalProps) {
 					<div className="grid grid-cols-2 gap-2 sm:gap-3">
 						<div className="bg-[#0f0f0f] rounded-lg p-2 sm:p-3 border border-[#333]">
 							<p className="text-gray-500 text-xs mb-1">ROI</p>
-							<p className="text-lg sm:text-2xl font-bold text-[#cdff00]">
+							<p className="text-lg sm:text-2xl font-bold text-brand-dark-green">
 								{tier.roi}%
 							</p>
 						</div>
@@ -146,7 +146,7 @@ function InvestmentModal({ isOpen, tier, onClose }: InvestmentModalProps) {
 									onClick={() => setSelectedCrypto(crypto.id)}
 									className={`p-3 sm:p-3 rounded-lg border transition-all duration-200 text-left ${
 										selectedCrypto === crypto.id
-											? 'border-[#cdff00] bg-[#cdff00]/10'
+											? 'border-brand-dark-green bg-brand-dark-green/10'
 											: 'border-[#333] bg-[#0f0f0f] hover:border-[#444]'
 									}`}
 								>
