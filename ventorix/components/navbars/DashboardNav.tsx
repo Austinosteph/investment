@@ -13,29 +13,12 @@ export function DashboardNav() {
 			<nav className="bg-neutral-900 border-b border-neutral-800 px-4 sm:px-6 py-4">
 				<div className="flex items-center justify-between">
 					{/* Left section - Logo */}
-					<div className="text-base font-semibold text-lime-400">VENTORIX</div>
-
-					{/* Desktop Navigation - Hidden on mobile */}
-					<div className="hidden md:flex gap-8">
-						<Link
-							href="/dashboard"
-							className="text-neutral-400 hover:text-white transition-colors text-sm font-medium"
-						>
-							DASHBOARD
-						</Link>
-						<Link
-							href="/invest"
-							className="text-neutral-400 hover:text-white transition-colors text-sm font-medium"
-						>
-							INVEST
-						</Link>
-						<Link
-							href="/history"
-							className="text-neutral-400 hover:text-white transition-colors text-sm font-medium"
-						>
-							HISTORY
-						</Link>
-					</div>
+					<Link
+						href="/dashboard"
+						className="text-base font-semibold text-lime-400"
+					>
+						VENTORIX
+					</Link>
 
 					{/* Right section - User avatar and mobile menu */}
 					<div className="flex items-center gap-4">
@@ -81,11 +64,25 @@ export function DashboardNav() {
 							INVEST
 						</Link>
 						<Link
-							href="/history"
+							href="/progress"
 							className="text-neutral-400 hover:text-white transition-colors text-sm font-medium"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
-							HISTORY
+							PROGRESS
+						</Link>
+						<Link
+							href="/transactions"
+							className="text-neutral-400 hover:text-white transition-colors text-sm font-medium"
+							onClick={() => setIsMobileMenuOpen(false)}
+						>
+							TRANSACTIONS
+						</Link>
+						<Link
+							href="/profile"
+							className="text-neutral-400 hover:text-white transition-colors text-sm font-medium"
+							onClick={() => setIsMobileMenuOpen(false)}
+						>
+							PROFILE
 						</Link>
 						{/* Mobile Avatar */}
 						<div className="sm:hidden pt-4 border-t border-neutral-800">
