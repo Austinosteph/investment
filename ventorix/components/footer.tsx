@@ -32,7 +32,7 @@ const Footer = () => {
 				<div className="hidden sm:flex lg:hidden flex-col gap-4 items-center text-center">
 					<div>
 						<h1 className="text-base text-white">VENTORIX CAPITAL</h1>
-						<span className="text-xs text-brand-light-green block mt-1">
+						<span className="text-xs text-brand-secondary block mt-1">
 							© 2026 VENTORIX CAPITAL GROUP. All rights reserved. SEC Regulated
 							Platform.
 						</span>
