@@ -6,16 +6,17 @@
 
 @theme {
 	/* brand colors */
-	--color-brand-dark: #070a00;
-	--color-brand-navdark: #111316;
-	--color-brand-light-green: #c4c9ac;
-	--color-brand-dark-green: #c3f400;
-	--color-brand-text-green: #111316;
-	--color-brand-light-blue: #00eefc;
+	--color-brand: #f8f9f5;
+	--color-brand-nav: #edfccb;
+	--color-brand-primary: #30391c;
+	--color-brand-secondary: #f7ffe6;
+	--color-brand-text: #111316;
+	--color-brand-accent: #660000;
+	--color-brand-tertiary: #00d9ff;
 	--color-brand-footer: #0c0e11;
 
 	/* Map background and foreground to brand colors */
-	--color-background: var(--color-brand-dark);
+	--color-background: var(--color-brand);
 	--color-foreground: var(--color-brand-light-green);
 }
 
@@ -29,7 +30,7 @@ body {
 :root {
 	/* Your brand colors as main colors */
 	--background: #070a00;
-	--foreground: #c4c9ac;
+	--foreground: #f5f6f3;
 	--card: #111316;
 	--card-foreground: #c4c9ac;
 	--border: #c4c9ac;

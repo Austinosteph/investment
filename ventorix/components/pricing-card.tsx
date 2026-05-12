@@ -17,26 +17,26 @@ const brandColorMap = {
 	green: {
 		text: 'text-brand-light-green',
 		bg: 'bg-brand-light-green',
-		border: 'border-brand-light-green',
-		bgLight: 'bg-brand-light-green/10',
-		bgDark: 'bg-brand-dark-green',
-		textDark: 'text-brand-text-green',
+		border: 'border-brand-primary',
+		bgLight: 'bg-brand-primary/10',
+		bgDark: 'bg-brand-primary',
+		textDark: 'text-brand-secondary',
 	},
 	yellow: {
-		text: 'text-brand-light-green',
-		bg: 'bg-brand-dark-green',
-		border: 'border-brand-light-green',
-		bgLight: 'bg-brand-light-green/10',
-		bgDark: 'bg-brand-dark-green',
-		textDark: 'text-brand-text-green',
+		text: 'text-brand-primary',
+		bg: 'bg-brand-primary',
+		border: 'border-brand-primary',
+		bgLight: 'bg-brand-primary/10',
+		bgDark: 'bg-brand-primary',
+		textDark: 'text-brand-secondary',
 	},
 	cyan: {
-		text: 'text-brand-light-blue',
-		bg: 'bg-brand-light-blue',
-		border: 'border-brand-light-blue',
-		bgLight: 'bg-brand-light-blue/10',
-		bgDark: 'bg-brand-light-blue',
-		textDark: 'text-black',
+		text: 'text-brand-accent',
+		bg: 'bg-brand-accent',
+		border: 'border-brand-accent',
+		bgLight: 'bg-brand-accent/10',
+		bgDark: 'bg-brand-accent',
+		textDark: 'text-brand-secondary',
 	},
 };
 
@@ -56,8 +56,8 @@ export function PricingCard({
 		<div
 			className={`relative flex flex-col rounded-2xl border transition-all duration-300 p-6 sm:p-8 ${
 				highlighted
-					? `${colors.border} bg-black/40 shadow-2xl scale-105`
-					: 'border-gray-700 bg-gray-900/30'
+					? `${colors.border} bg-brand-primary/10 shadow-2xl scale-105`
+					: 'border-brand-primary bg-brand-primary/10'
 			}`}
 		>
 			{highlighted && (
@@ -70,16 +70,18 @@ export function PricingCard({
 				</div>
 			)}
 
-			<h3 className="text-xl font-bold text-white sm:text-2xl">{tier}</h3>
+			<h3 className="text-xl font-bold text-brand-primary sm:text-2xl">
+				{tier}
+			</h3>
 
 			<div className="mt-4 sm:mt-6 flex items-baseline gap-1">
 				<span className={`text-4xl font-bold sm:text-5xl ${colors.text}`}>
 					{apy}
 				</span>
-				<span className="text-gray-400 text-sm sm:text-lg">EST APY</span>
+				<span className="text-yellow-500 text-sm sm:text-lg">EST APY</span>
 			</div>
 
-			<p className="mt-2 sm:mt-3 text-gray-300 text-xs sm:text-sm">
+			<p className="mt-2 sm:mt-3 text-brand-primary text-xs sm:text-sm">
 				{description}
 			</p>
 
@@ -100,7 +102,7 @@ export function PricingCard({
 				{features.map((feature, index) => (
 					<div key={index} className="flex items-start gap-3">
 						<Check className={`mt-0.5 shrink-0 ${colors.text}`} size={18} />
-						<span className="text-gray-200 text-xs sm:text-sm leading-relaxed">
+						<span className="text-brand-primary text-xs sm:text-sm leading-relaxed">
 							{feature}
 						</span>
 					</div>

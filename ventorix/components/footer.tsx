@@ -2,30 +2,27 @@ import Link from 'next/link';
 
 const Footer = () => {
 	return (
-		<footer className="w-full bg-brand-navdark">
+		<footer className="w-full bg-brand-primary">
 			<div className="w-full px-4 sm:px-8 lg:px-36 py-4 sm:py-6">
 				{/* Mobile Layout - Stacked */}
 				<div className="flex flex-col sm:hidden gap-4 text-center">
 					<div>
 						<h1 className="text-base text-white">VENTORIX CAPITAL</h1>
-						<span className="text-xs text-brand-light-green block mt-1">
+						<span className="text-xs text-brand-secondary block mt-1">
 							© 2026 VENTORIX CAPITAL GROUP. All rights reserved.
 						</span>
-						<span className="text-xs text-brand-light-green block">
+						<span className="text-xs text-brand-secondary block">
 							SEC Regulated Platform.
 						</span>
 					</div>
-					<div className="flex flex-col gap-2 text-brand-light-green text-xs">
-						<Link
-							className="hover:text-white transition-colors"
-							href="/privacy"
-						>
+					<div className="flex flex-col gap-2 text-brand-secondary text-xs">
+						<Link className="hover:scale-105 transition-all" href="/privacy">
 							Privacy Policy
 						</Link>
-						<Link className="hover:text-white transition-colors" href="/terms">
+						<Link className="hover:scale-105 transition-all" href="/terms">
 							Terms of Service
 						</Link>
-						<Link className="hover:text-white transition-colors" href="/risk">
+						<Link className="hover:scale-105 transition-all" href="/risk">
 							Risk Disclosure
 						</Link>
 					</div>
@@ -40,17 +37,14 @@ const Footer = () => {
 							Platform.
 						</span>
 					</div>
-					<div className="flex gap-4 sm:gap-6 text-brand-light-green text-xs">
-						<Link
-							className="hover:text-white transition-colors"
-							href="/privacy"
-						>
+					<div className="flex gap-4 sm:gap-6 text-brand-secondary text-xs">
+						<Link className="hover:scale-105 transition-all" href="/privacy">
 							Privacy Policy
 						</Link>
-						<Link className="hover:text-white transition-colors" href="/terms">
+						<Link className="hover:scale-105 transition-all" href="/terms">
 							Terms of Service
 						</Link>
-						<Link className="hover:text-white transition-colors" href="/risk">
+						<Link className="hover:scale-105 transition-all" href="/risk">
 							Risk Disclosure
 						</Link>
 					</div>
@@ -60,22 +54,19 @@ const Footer = () => {
 				<div className="hidden lg:flex flex-row justify-between items-center">
 					<div>
 						<h1 className="text-base text-white">VENTORIX CAPITAL</h1>
-						<span className="text-xs text-brand-light-green block mt-1">
+						<span className="text-xs text-brand-secondary block mt-1">
 							© 2026 VENTORIX CAPITAL GROUP. All rights reserved. SEC Regulated
 							Platform.
 						</span>
 					</div>
-					<div className="flex gap-6 text-brand-light-green text-xs">
-						<Link
-							className="hover:text-white transition-colors"
-							href="/privacy"
-						>
+					<div className="flex gap-6 text-brand-secondary text-xs">
+						<Link className="hover:scale-105 transition-all" href="/privacy">
 							Privacy Policy
 						</Link>
-						<Link className="hover:text-white transition-colors" href="/terms">
+						<Link className="hover:scale-105 transition-all" href="/terms">
 							Terms of Service
 						</Link>
-						<Link className="hover:text-white transition-colors" href="/risk">
+						<Link className="hover:scale-105 transition-all" href="/risk">
 							Risk Disclosure
 						</Link>
 					</div>

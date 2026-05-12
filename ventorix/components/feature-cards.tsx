@@ -30,7 +30,7 @@ const features = [
 			'Monitor performance in real-time with our advanced analytics dashboard. Withdraw your profits anytime.',
 		icon: TrendingUp,
 		borderColor: 'border-brand-dark-green',
-		iconColor: 'text-white',
+		iconColor: 'text-black',
 		bgColor: 'bg-white/15',
 	},
 ];
@@ -39,10 +39,10 @@ export function FeatureCards() {
 	return (
 		<section className="w-full px-4 sm:px-8 lg:px-36 py-12 sm:py-16">
 			<div className="text-center mb-8 sm:mb-12">
-				<h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-balance text-white">
+				<h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-balance text-black">
 					The Ventorix Advantage
 				</h1>
-				<p className="mt-4 text-sm sm:text-base tracking-widest text-brand-light-green">
+				<p className="mt-4 text-sm sm:text-base tracking-widest text-brand-primary">
 					SIMPLE • SECURE • SCALABLE
 				</p>
 			</div>
@@ -61,7 +61,7 @@ export function FeatureCards() {
 									className={`h-5 w-5 sm:h-6 sm:w-6 ${feature.iconColor}`}
 								/>
 							</div>
-							<h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3">
+							<h3 className="text-lg sm:text-xl font-semibold text-black mb-2 sm:mb-3">
 								{feature.title}
 							</h3>
 							<p className="text-xs sm:text-sm text-muted-foreground leading-relaxed text-brand-light-green">

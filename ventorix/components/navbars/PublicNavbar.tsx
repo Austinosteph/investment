@@ -10,7 +10,7 @@ export const PublicNavbar = () => {
 	};
 
 	return (
-		<nav className="sticky top-0 z-50 flex flex-row sm:px-8 lg:px-36 items-center bg-brand-navdark justify-between p-3 sm:p-4 border-b border-brand-light-green">
+		<nav className="sticky top-0 z-50 flex flex-row sm:px-8 lg:px-36 items-center bg-brand-nav justify-between p-3 sm:p-4 border-b border-brand-primary">
 			{/* Hamburger Menu - Mobile/Tablet Only */}
 			<button
 				onClick={toggleMobileMenu}
@@ -18,47 +18,47 @@ export const PublicNavbar = () => {
 				aria-label="Toggle mobile menu"
 			>
 				<span
-					className={`block w-5 h-0.5 bg-brand-light-green transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}
+					className={`block w-5 h-0.5 bg-brand-primary transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}
 				></span>
 				<span
-					className={`block w-5 h-0.5 bg-brand-light-green transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}
+					className={`block w-5 h-0.5 bg-brand-primary transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}
 				></span>
 				<span
-					className={`block w-5 h-0.5 bg-brand-light-green transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}
+					className={`block w-5 h-0.5 bg-brand-primary transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}
 				></span>
 			</button>
 
 			{/* Logo */}
 			<Link
 				href="/"
-				className="text-brand-dark-green font-bold text-sm sm:text-base lg:text-xl xl:text-2xl"
+				className="text-brand-primary font-bold text-sm sm:text-base lg:text-xl xl:text-2xl"
 			>
 				VENTORIX CAPITAL
 			</Link>
 
 			{/* Desktop Navigation - Hidden on Tablet/Mobile */}
-			<div className="hidden lg:flex gap-12 text-brand-light-green text-sm xl:text-base">
-				<Link className="hover:text-white hover:font-bold " href="/plans">
+			<div className="hidden font-bold lg:flex gap-12 text-brand-primary text-sm xl:text-base">
+				<Link className=" hover:transition-all hover:scale-105" href="/plans">
 					Plans
 				</Link>
-				<Link className="hover:text-white hover:font-bold" href="/market">
+				<Link className=" hover:transition-all hover:scale-105" href="/market">
 					Market
 				</Link>
-				<Link className="hover:text-white hover:font-bold" href="/about">
-					About
+				<Link className=" hover:transition-all hover:scale-105" href="/about">
+					About Us
 				</Link>
 			</div>
 
 			{/* CTA */}
-			<div className="flex gap-2 sm:gap-4 text-brand-light-green text-sm sm:text-base items-center">
+			<div className="flex gap-2 sm:gap-4 text-brand-primary text-sm sm:text-base items-center">
 				<Link
-					className="hidden md:block transition-all hover:scale-105"
+					className="hidden font-bold md:block transition-all hover:scale-105"
 					href="/login"
 				>
 					Login
 				</Link>
 				<Link
-					className="bg-brand-dark-green transition-all hover:scale-105 text-brand-text-green/85 text-xs sm:text-base px-2 sm:px-3 py-1 sm:py-1.5 border border-brand-dark-green font-bold rounded-lg"
+					className="bg-brand-primary transition-all hover:scale-105 text-brand-secondary text-xs sm:text-base px-2 sm:px-3 py-1 sm:py-1.5 border border-brand-primary font-bold rounded-lg"
 					href="/signup"
 				>
 					Signup
@@ -67,31 +67,31 @@ export const PublicNavbar = () => {
 
 			{/* Mobile/Tablet Dropdown Menu */}
 			{isMobileMenuOpen && (
-				<div className="absolute top-full left-0 w-full bg-brand-navdark border-b border-brand-light-green lg:hidden">
+				<div className="absolute top-full left-0 w-full bg-brand-nav border-b border-brand-primary lg:hidden">
 					<div className="flex flex-col p-4 space-y-2 sm:space-y-3">
 						<Link
-							className="text-brand-light-green hover:text-white hover:font-bold py-2 text-sm sm:text-base"
+							className="text-brand-primary font-bold transition-all hover:scale-105 py-2 text-sm sm:text-base"
 							href="/plans"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							Plans
 						</Link>
 						<Link
-							className="text-brand-light-green hover:text-white hover:font-bold py-2 text-sm sm:text-base"
+							className="text-brand-primary font-bold transition-all hover:scale-105 py-2 text-sm sm:text-base"
 							href="/market"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							Market
 						</Link>
 						<Link
-							className="text-brand-light-green hover:text-white hover:font-bold py-2 text-sm sm:text-base"
+							className="text-brand-primary font-bold transition-all hover:scale-105 py-2 text-sm sm:text-base"
 							href="/about"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
-							About
+							About Us
 						</Link>
 						<Link
-							className="text-brand-light-green hover:text-white hover:font-bold py-2 text-sm sm:text-base"
+							className="text-brand-primary font-bold transition-all hover:scale-105 py-2 text-sm sm:text-base"
 							href="/login"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
