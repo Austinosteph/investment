@@ -3,12 +3,12 @@ import { ArrowLeft } from 'lucide-react';
 
 const AuthNavbar = () => {
 	return (
-		<div className="flex items-center justify-between px-6 p-4 md:px-36 md:p-4 bg-brand-navdark">
+		<div className="flex items-center justify-between px-6 p-4 md:px-36 md:p-4 bg-brand-nav">
 			{/* Back Arrow + Logo */}
 			<div className="flex items-center gap-4">
 				<Link
 					href="/"
-					className="flex items-center text-brand-light-green hover:text-brand-dark-green transition-colors"
+					className="flex items-center text-brand-primary"
 					aria-label="Back to home"
 				>
 					<ArrowLeft className="h-5 w-5 transition-all hover:scale-110" />
@@ -21,7 +21,7 @@ const AuthNavbar = () => {
 				</Link>
 			</div>
 
-			<div className="text-xs md:text-sm text-white tracking-widest">
+			<div className="text-xs md:text-sm text-brand-primary tracking-widest">
 				SECURE TERMINAL v.2.4
 			</div>
 		</div>

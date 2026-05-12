@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const FooterAuth = () => {
 	return (
-		<footer className="w-full bg-brand-navdark">
+		<footer className="w-full bg-brand-nav">
 			<div className="w-full px-4 sm:px-8 lg:px-36 py-4 sm:py-6">
 				{/* Mobile Layout - Stacked */}
 				<div className="flex flex-col sm:hidden gap-4 text-center">
