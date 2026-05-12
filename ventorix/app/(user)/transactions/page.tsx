@@ -102,7 +102,7 @@ export default function Home() {
 									onTabChange={setActiveTab}
 								/>
 							</div>
-							<div className="flex gap-2 sm:gap-3 flex-shrink-0">
+							<div className="flex gap-2 sm:gap-3 shrink-0">
 								<Button
 									variant="outline"
 									size="sm"

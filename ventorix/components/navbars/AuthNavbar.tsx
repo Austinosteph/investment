@@ -15,7 +15,7 @@ const AuthNavbar = () => {
 				</Link>
 				<Link
 					href="/"
-					className="text-brand-dark-green font-bold text-sm sm:text-base lg:text-xl xl:text-2xl"
+					className="text-brand-primary font-bold text-sm sm:text-base lg:text-xl xl:text-2xl"
 				>
 					VENTORIX CAPITAL
 				</Link>
