@@ -18,16 +18,16 @@ interface ActivityTimelineProps {
 
 const ICON_MAPPING: Record<string, React.ReactNode> = {
 	investment: (
-		<Activity className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-brand-dark-green" />
+		<Activity className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-brand-accent" />
 	),
 	growth: (
-		<Activity className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-brand-light-blue" />
+		<Activity className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-brand-tertiary" />
 	),
 	deposit: (
-		<Activity className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-brand-light-green" />
+		<Activity className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-brand-secondary" />
 	),
 	verification: (
-		<Activity className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-500" />
+		<Activity className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-yellow-500" />
 	),
 };
 
@@ -45,7 +45,7 @@ export default function ActivityTimeline({
 				return (
 					<div key={activity.id}>
 						{showDateHeader && (
-							<div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4 sm:mb-6 ml-12 sm:ml-16">
+							<div className="text-xs font-semibold text-brand-primary/85 uppercase tracking-wider mb-4 sm:mb-6 ml-12 sm:ml-16">
 								{activity.date}
 							</div>
 						)}
@@ -53,12 +53,12 @@ export default function ActivityTimeline({
 							{/* Timeline line */}
 							<div className="relative">
 								<div className="w-8 sm:w-12 flex justify-center pt-2">
-									<div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-neutral-800 flex items-center justify-center border-2 border-neutral-700">
+									<div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-brand-primary flex items-center justify-center border-2 border-brand-secondary">
 										{ICON_MAPPING[activity.icon] || ICON_MAPPING.investment}
 									</div>
 								</div>
 								{index !== activities.length - 1 && (
-									<div className="absolute left-1/2 top-8 sm:top-12 w-0.5 h-16 sm:h-20 bg-neutral-700 -translate-x-1/2" />
+									<div className="absolute left-1/2 top-8 sm:top-12 w-0.5 h-16 sm:h-20 bg-brand-primary -translate-x-1/2" />
 								)}
 							</div>
 

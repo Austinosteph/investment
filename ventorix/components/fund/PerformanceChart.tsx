@@ -25,7 +25,7 @@ const data = [
 
 export function PerformanceChart() {
 	return (
-		<div className="bg-brand-light-green/5 rounded-lg p-8 border border-brand-light-green">
+		<div className="bg-brand-primary rounded-lg p-8">
 			{/* Header */}
 			<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
 				<div>
@@ -108,18 +108,18 @@ export function PerformanceChart() {
 			{/* Legend */}
 			<div className="flex gap-6 mt-6 text-sm">
 				<div className="flex items-center gap-2">
-					<div className="w-3 h-0.5 bg-brand-light-green" />
-					<span className="text-gray-300">Actual Progress</span>
+					<div className="w-3 h-0.5 bg-brand-secondary" />
+					<span className="text-brand-secondary">Actual Progress</span>
 				</div>
 				<div className="flex items-center gap-2">
 					<div
-						className="w-3 h-0.5 bg-brand-light-green"
+						className="w-3 h-0.5 bg-brand-secondary"
 						style={{
 							backgroundImage:
 								'linear-gradient(90deg, #D4FF00 50%, transparent 50%)',
 						}}
 					/>
-					<span className="text-gray-300">Projected Return</span>
+					<span className="text-brand-secondary">Projected Return</span>
 				</div>
 			</div>
 

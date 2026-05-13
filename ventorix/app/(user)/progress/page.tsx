@@ -10,7 +10,7 @@ export default function Home() {
 	return (
 		<>
 			<DashboardNav />
-			<main className="flex-1 p-3 sm:p-4 md:p-6 lg:p-8 text-white overflow-auto">
+			<main className="flex-1 p-3 sm:p-4 md:p-6 lg:p-8 text-brand-primary bg-background overflow-auto">
 				<div className="max-w-7xl mx-auto">
 					{/* Content Sections */}
 					<div className="space-y-6 sm:space-y-8 lg:space-y-12">

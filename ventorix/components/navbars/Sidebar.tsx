@@ -44,17 +44,19 @@ export function Sidebar() {
 	const pathname = usePathname();
 
 	return (
-		<aside className="bg-brand-navdark w-48 h-screen border-r border-brand-navdark p-4 flex flex-col">
+		<aside className="bg-brand-primary w-48 h-screen border-r border-brand-navdark p-4 flex flex-col">
 			{/* Logo */}
 			<div className="mb-8">
-				<h1 className="text-2xl font-bold text-white">VENTORIX</h1>
+				<h1 className="text-2xl font-bold text-brand-secondary">VENTORIX</h1>
 			</div>
 
 			{/* User Info */}
-			<div className="mb-8 p-3 bg-neutral-900 rounded-lg border border-neutral-800">
-				<div className="text-sm font-semibold text-white">Alex Rivers</div>
-				<div className="text-xs text-neutral-500 uppercase">INSTITUTIONAL</div>
-				<div className="text-xs text-neutral-500 uppercase">TIER</div>
+			<div className="mb-8 p-3 rounded-lg bg-brand-secondary/75">
+				<div className="text-sm font-semibold text-black">Alex Rivers</div>
+				<div className="text-xs text-brand-primary uppercase">
+					INSTITUTIONAL
+				</div>
+				<div className="text-xs text-brand-primary uppercase">TIER</div>
 			</div>
 
 			{/* Navigation Menu */}
@@ -67,10 +69,10 @@ export function Sidebar() {
 						<Link
 							key={item.href}
 							href={item.href}
-							className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm font-medium ${
+							className={`flex items-center gap-3 px-3 py-4 rounded-lg transition-colors text-sm font-medium ${
 								isActive
-									? 'bg-brand-dark-green text-brand-text-green'
-									: 'text-brand-light-green hover:text-white hover:bg-brand-light-green/10'
+									? 'border border-brand-secondary text-brand-secondary hover:scale-105 transition-all'
+									: 'text-brand-secondary hover:text-white hover:scale-110 transition-all'
 							}`}
 						>
 							<Icon className="w-4 h-4" />

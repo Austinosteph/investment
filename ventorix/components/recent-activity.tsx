@@ -66,7 +66,7 @@ function ActivityIcon({
 
 export function RecentActivity() {
 	return (
-		<div className="bg-neutral-900 border border-neutral-800 rounded-lg p-4 sm:p-6">
+		<div className="bg-brand-primary border border-brand-primary/50 rounded-lg p-4 sm:p-6">
 			<h2 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">
 				Recent Activity
 			</h2>
@@ -79,10 +79,10 @@ export function RecentActivity() {
 							<h3 className="text-white font-medium text-xs sm:text-sm">
 								{activity.title}
 							</h3>
-							<p className="text-neutral-400 text-xs sm:text-xs mt-1">
+							<p className="text-brand-secondary text-xs sm:text-xs mt-1">
 								{activity.description}
 							</p>
-							<p className="text-neutral-500 text-xs mt-1 sm:mt-2">
+							<p className="text-brand-secondary/50 text-xs mt-1 sm:mt-2">
 								{activity.timestamp}
 							</p>
 						</div>

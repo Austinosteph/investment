@@ -13,7 +13,7 @@ export function CustodyArchitecture() {
 						alt="Custody Architecture"
 						width={400}
 						height={400}
-						className="w-full h-auto max-w-sm lg:max-w-md object-contain rounded-lg"
+						className="w-full h-auto max-w-lg lg:max-w-2xl object-contain rounded-lg"
 					/>
 				</div>
 

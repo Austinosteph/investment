@@ -10,12 +10,12 @@ export function DashboardNav() {
 
 	return (
 		<>
-			<nav className="bg-neutral-900 border-b border-neutral-800 px-4 sm:px-6 py-4">
+			<nav className="bg-background/95  border-b-2 border-brand-primary px-4 sm:px-6 py-4">
 				<div className="flex items-center justify-between">
 					{/* Left section - Logo */}
 					<Link
 						href="/dashboard"
-						className="text-base font-semibold text-lime-400"
+						className="text-base font-semibold text-primary"
 					>
 						VENTORIX
 					</Link>
@@ -33,7 +33,7 @@ export function DashboardNav() {
 						{/* Mobile Menu Toggle */}
 						<button
 							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-							className="md:hidden text-neutral-400 hover:text-white transition-colors"
+							className="md:hidden text-brand-primary hover:scale-105 transition-colors"
 						>
 							{isMobileMenuOpen ? (
 								<X className="h-6 w-6" />
@@ -47,39 +47,39 @@ export function DashboardNav() {
 
 			{/* Mobile Navigation Menu */}
 			{isMobileMenuOpen && (
-				<div className="md:hidden bg-neutral-900 border-b border-neutral-800 px-4 py-4">
+				<div className="md:hidden bg-background/95 border-b border-neutral-800 px-4 py-4">
 					<div className="flex flex-col gap-4">
 						<Link
 							href="/dashboard"
-							className="text-neutral-400 hover:text-white transition-colors text-sm font-medium"
+							className="text-brand-primary hover:scale-105 transition-all text-sm font-bold"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							DASHBOARD
 						</Link>
 						<Link
 							href="/invest"
-							className="text-neutral-400 hover:text-white transition-colors text-sm font-medium"
+							className="text-brand-primary hover:scale-105 transition-all text-sm font-bold"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							INVEST
 						</Link>
 						<Link
 							href="/progress"
-							className="text-neutral-400 hover:text-white transition-colors text-sm font-medium"
+							className="text-brand-primary hover:scale-105 transition-all text-sm font-bold"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							PROGRESS
 						</Link>
 						<Link
 							href="/transactions"
-							className="text-neutral-400 hover:text-white transition-colors text-sm font-medium"
+							className="text-brand-primary hover:scale-105 transition-all text-sm font-bold"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							TRANSACTIONS
 						</Link>
 						<Link
 							href="/profile"
-							className="text-neutral-400 hover:text-white transition-colors text-sm font-medium"
+							className="text-brand-primary hover:scale-105 transition-all text-sm font-bold"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							PROFILE

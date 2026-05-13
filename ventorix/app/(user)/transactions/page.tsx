@@ -57,14 +57,14 @@ export default function Home() {
 	return (
 		<>
 			<DashboardNav />
-			<main className="flex-1 p-3 sm:p-4 md:p-6 lg:p-8 text-white overflow-auto">
+			<main className="flex-1 p-3 sm:p-4 md:p-6 lg:p-8 text-brand-primary bg-background overflow-auto">
 				<div className="max-w-7xl mx-auto">
 					{/* Header */}
 					<div className="mb-6 sm:mb-8 lg:mb-12">
-						<h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-2 sm:mb-3 lg:mb-4">
+						<h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-black mb-2 sm:mb-3 lg:mb-4">
 							Activity Ledger
 						</h1>
-						<p className="text-gray-400 text-xs sm:text-sm lg:text-base leading-relaxed max-w-2xl lg:max-w-3xl">
+						<p className="text-brand-primary text-xs sm:text-sm lg:text-base leading-relaxed max-w-2xl lg:max-w-3xl">
 							Comprehensive vertical history of your institutional investment
 							activities, capital growth credits, and fund confirmations.
 						</p>
@@ -79,14 +79,14 @@ export default function Home() {
 								<Button
 									variant="outline"
 									size="sm"
-									className="flex-1 border-brand-light-green hover:bg-brand-light-green/10 text-brand-light-green"
+									className="flex-1 text-brand-primary border border-brand-accent hover:scale-105 font-semibold transition-all"
 								>
 									<Filter className="w-4 h-4 mr-2" />
 									Filter
 								</Button>
 								<Button
 									size="sm"
-									className="flex-1 bg-brand-dark-green text-brand-text-green hover:bg-brand-dark-green/90 font-semibold"
+									className="flex-1 border-brand-primary text-brand-secondary bg-brand-primary hover:scale-105 transition-all font-semiboldd"
 								>
 									<Download className="w-4 h-4 mr-2" />
 									Export
@@ -106,14 +106,15 @@ export default function Home() {
 								<Button
 									variant="outline"
 									size="sm"
-									className="border-brand-light-green hover:bg-brand-light-green/10 text-brand-light-green"
+									className="text-brand-primary border border-brand-accent hover:scale-105 font-semibold transition-all"
 								>
 									<Filter className="w-4 h-4 mr-2" />
 									Filter
 								</Button>
 								<Button
 									size="sm"
-									className="bg-brand-dark-green text-brand-text-green hover:bg-brand-dark-green/90 font-semibold"
+									className="
+									border-brand-primary text-brand-secondary bg-brand-primary hover:scale-105 transition-all font-semibold"
 								>
 									<Download className="w-4 h-4 mr-2" />
 									Export CSV
@@ -131,7 +132,7 @@ export default function Home() {
 					<div className="flex justify-center mb-8 sm:mb-12">
 						<Button
 							variant="outline"
-							className="border-brand-light-green hover:bg-brand-light-green/10 text-brand-light-green px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
+							className="border-brand-primary border-2 hover:scale-105 text-brand-primary px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
 						>
 							Load Historical Activity
 						</Button>
