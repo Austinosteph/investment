@@ -38,8 +38,8 @@ const AboutUs = () => {
 		<div>
 			<div className="min-h-screen relative w-full py-8 md:py-8 lg:py-10 px-4 md:px-6 lg:px-8 bg-background">
 				{/* hero */}
-				<section className=" mx-auto mb-2 md:mb-16 lg:mb-24">
-					<div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+				<section className=" mx-auto mb-2 md:mb-16 lg:mb-24 max-w-7xl">
+					<div className="flex flex-col lg:flex-row gap-8 lg:gap-2 items-center">
 						{/* Left content */}
 						<div className="flex-1 space-y-4 md:space-y-6">
 							<p className="text-xs md:text-sm font-semibold uppercase tracking-wide text-brand-primary">
@@ -87,7 +87,7 @@ const AboutUs = () => {
 					</div>
 				</section>
 				{/* Mission statement */}
-				<section className=" mx-auto mb-10 md:mb-16 lg:mb-20">
+				<section className=" mx-auto mb-10 md:mb-16 lg:mb-20 max-w-7xl">
 					<div className="space-y-4 md:space-y-10">
 						<h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
 							Our Mission & History
@@ -182,7 +182,7 @@ const AboutUs = () => {
 					</div>
 				</section>
 
-				{/* global network */}
+				{/* global */}
 				<section className="mx-auto mt-12 md:mt-16 bg-brand-primary p-4 md:p-6">
 					<div className="space-y-8 md:space-y-12">
 						<div>
