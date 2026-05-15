@@ -47,7 +47,7 @@ const tiers = [
 	},
 ];
 
-export default function Home() {
+export default function Plans() {
 	return (
 		<main className="min-h-screen bg-background">
 			<div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:py-20">

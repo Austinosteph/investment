@@ -51,7 +51,7 @@ const ACTIVITIES = [
 	},
 ];
 
-export default function Home() {
+export default function Transaction() {
 	const [activeTab, setActiveTab] = useState('all');
 
 	return (

@@ -7,7 +7,7 @@ import { RecentActivity } from '@/components/recent-activity';
 import { Eye, ChartNoAxesCombined } from 'lucide-react';
 import Footer from '@/components/footer';
 
-export default function Home() {
+export default function Dashboard() {
 	return (
 		<>
 			<DashboardNav />

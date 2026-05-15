@@ -6,7 +6,7 @@ import { MilestoneSection } from '@/components/fund/MilestoneSection';
 import { DashboardNav } from '@/components/navbars/DashboardNav';
 import FooterAuth from '@/components/footerauth';
 
-export default function Home() {
+export default function Progress() {
 	return (
 		<>
 			<DashboardNav />
