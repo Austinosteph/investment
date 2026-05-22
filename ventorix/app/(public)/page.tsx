@@ -3,20 +3,13 @@
 import Link from 'next/link';
 import { ArrowRight, TrendingUp, Zap } from 'lucide-react';
 import Image from 'next/image';
-
-const chartData = [
-	{ name: 'Jan', value: 45 },
-	{ name: 'Feb', value: 52 },
-	{ name: 'Mar', value: 48 },
-	{ name: 'Apr', value: 65 },
-	{ name: 'May', value: 72 },
-];
+import BTCChart from '@/components/charts/btcchart';
 
 export default function Home() {
 	return (
 		<main className="bg-background items-center justify-center ">
-			<div className="w-full px-4 sm:px-8 lg:px-36 py-8 sm:py-12">
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-28 items-center">
+			<div className="w-full px-4 sm:px-8 lg:px-24 py-8 sm:py-12">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
 					{/* Left Section */}
 					<div className="flex flex-col gap-6 lg:gap-8">
 						{/* Badge */}
@@ -57,51 +50,10 @@ export default function Home() {
 						</div>
 					</div>
 					{/* Right Section - Chart */}
-					<div className="flex items-center justify-center lg:justify-end">
-						<div className="w-full max-w-md p-4 sm:p-6 lg:p-8 rounded-2xl border border-brand-primary bg-brand-secondary">
-							<div className="mb-6 sm:mb-8">
-								<p className="text-xs font-medium tracking-widest uppercase text-brand-primary mb-2">
-									Global Portfolio Index
-								</p>
-								<div className="flex flex-row justify-between gap-2 sm:gap-3">
-									<h2 className="text-2xl sm:text-3xl font-bold text-black">
-										$428,901.00
-									</h2>
-									<span className="flex gap-1 px-3 py-1 rounded-lg text-brand-primary border border-brand-primary bg-brand-primary/15">
-										<span className="font-semibold text-xs sm:text-sm">
-											+12.4%
-										</span>
-									</span>
-								</div>
-							</div>
-							{/* Chart */}
-							<div className="flex items-end justify-center gap-2 sm:gap-3 h-48 sm:h-64">
-								{chartData.map((item, idx) => {
-									let barColor = 'var(--color-brand-primary)';
-									if (item.name === 'Apr')
-										barColor = 'var(--color-brand-accent)';
-									if (item.name === 'May')
-										barColor = 'var(--color-brand-accent)';
-									return (
-										<div
-											key={idx}
-											className="flex flex-col items-center gap-2 flex-1"
-										>
-											<div
-												className="w-full rounded-t-lg transition-all hover:opacity-80"
-												style={{
-													height: `${item.value * 2}px`,
-													backgroundColor: barColor,
-												}}
-											></div>
-											<span className="text-xs font-medium text-gray-400">
-												{item.name}
-											</span>
-										</div>
-									);
-								})}
-							</div>
-						</div>
+
+					<div className="w-full h-full rounded-2xl">
+						{/* Chart */}
+						<BTCChart />
 					</div>
 				</div>
 			</div>
