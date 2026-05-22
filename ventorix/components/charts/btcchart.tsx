@@ -83,7 +83,7 @@ export default function BTCChart() {
 	}, []);
 
 	return (
-		<div className="w-full h-[500px] rounded-2xl overflow-hidden bg-white">
+		<div className="w-full h-125 rounded-2xl overflow-hidden bg-background">
 			<div id="tradingview_chart" ref={chartRef} className="w-full h-full" />
 		</div>
 	);
