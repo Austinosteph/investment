@@ -3,39 +3,22 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import {
-	LayoutDashboard,
-	TrendingUp,
-	Activity,
-	History,
-	LogOut,
-} from 'lucide-react';
+import { CirclePlus, Users, LogOut } from 'lucide-react';
 
 const menuItems = [
 	{
-		name: 'Dashboard',
-		href: '/dashboard',
-		icon: LayoutDashboard,
-	},
-	{
-		name: 'Invest',
-		href: '/invest',
-		icon: TrendingUp,
-	},
-
-	{
-		name: 'Progress',
-		href: '/progress',
-		icon: Activity,
+		name: 'Users',
+		href: '/admin/users',
+		icon: Users,
 	},
 	{
 		name: 'Transactions',
-		href: '/transactions',
-		icon: History,
+		href: '/admin/transactions',
+		icon: CirclePlus,
 	},
 ];
 
-export function Sidebar() {
+export function AdminSidebar() {
 	const pathname = usePathname();
 
 	return (
@@ -46,12 +29,9 @@ export function Sidebar() {
 			</div>
 
 			{/* User Info */}
-			<div className="mb-8 p-3 rounded-lg bg-brand-secondary/75">
-				<div className="text-sm font-semibold text-black">Alex Rivers</div>
-				<div className="text-xs text-brand-primary uppercase">
-					INSTITUTIONAL
-				</div>
-				<div className="text-xs text-brand-primary uppercase">TIER</div>
+			<div className="mb-8 p-3 space-y-2 rounded-lg bg-brand-secondary/75">
+				<div className="text-sm font-semibold text-black">Administration</div>
+				<div className="text-xs text-brand-primary uppercase">PANEL</div>
 			</div>
 
 			{/* Navigation Menu */}

@@ -1,11 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-export function DashboardNav() {
+export function AdminNav() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	return (
@@ -22,14 +22,6 @@ export function DashboardNav() {
 
 					{/* Right section - User avatar and mobile menu */}
 					<div className="flex items-center gap-4">
-						{/* Desktop Avatar - Hidden on mobile */}
-						<Link href="/profile" className="hidden sm:block">
-							<Avatar className="h-8 w-8">
-								<AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex" />
-								<AvatarFallback>AR</AvatarFallback>
-							</Avatar>
-						</Link>
-
 						{/* Mobile Menu Toggle */}
 						<button
 							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -76,17 +68,6 @@ export function DashboardNav() {
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							TRANSACTIONS
-						</Link>
-
-						{/* Mobile Avatar */}
-						<Link
-							href="/profile"
-							className="sm:hidden	onClick={() => setIsMobileMenuOpen(false)}"
-						>
-							<Avatar className="h-8 w-8">
-								<AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex" />
-								<AvatarFallback>AR</AvatarFallback>
-							</Avatar>
 						</Link>
 					</div>
 				</div>
