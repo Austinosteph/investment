@@ -42,32 +42,18 @@ export function AdminNav() {
 				<div className="md:hidden bg-background/95 border-b border-neutral-800 px-4 py-4">
 					<div className="flex flex-col gap-4">
 						<Link
-							href="/dashboard"
+							href="/admin/users"
 							className="text-brand-primary hover:scale-105 transition-all text-sm font-bold"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
-							DASHBOARD
+							USERS
 						</Link>
 						<Link
-							href="/invest"
+							href="/admin/transactions"
 							className="text-brand-primary hover:scale-105 transition-all text-sm font-bold"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
-							INVEST
-						</Link>
-						<Link
-							href="/progress"
-							className="text-brand-primary hover:scale-105 transition-all text-sm font-bold"
-							onClick={() => setIsMobileMenuOpen(false)}
-						>
-							PROGRESS
-						</Link>
-						<Link
-							href="/transactions"
-							className="text-brand-primary hover:scale-105 transition-all text-sm font-bold"
-							onClick={() => setIsMobileMenuOpen(false)}
-						>
-							TRANSACTIONS
+							TRANSANCTIONS
 						</Link>
 					</div>
 				</div>
