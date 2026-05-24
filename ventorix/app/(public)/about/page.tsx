@@ -1,5 +1,8 @@
+'use client';
+
 import { Leadership } from '@/components/leadership';
 import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
 import {
 	Clock,
 	Users,
@@ -34,6 +37,11 @@ const features = [
 ];
 
 const AboutUs = () => {
+	const router = useRouter();
+
+	const handleSignup = () => {
+		router.push('/signup');
+	};
 	return (
 		<div>
 			<div className="min-h-screen relative w-full py-8 md:py-8 lg:py-10 px-4 md:px-6 lg:px-8 bg-background">
@@ -47,24 +55,30 @@ const AboutUs = () => {
 							</p>
 
 							<h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
-								Institutional-Grade Growth for the Digital Frontier
+								Engineered growth for the digital frontier through adaptive
+								financial systems.
 							</h1>
 
 							<p className="text-base md:text-lg lg:text-xl text-brand-primary leading-relaxed max-w-xl">
-								Bridge the gap between traditional asset management and the
-								high-velocity digital economy. Nova Capital provides the
-								security of institutional infrastructure with the agility of
-								cryptoactive strategy.
+								We build intelligent financial systems designed to adapt,
+								evolve, and drive consistent performance in fast-moving digital
+								markets.
 							</p>
 
 							<div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-4">
 								<Button
+									onClick={handleSignup}
 									size="lg"
 									className="bg-brand-primary hover:scale-105 text-brand-secondary transition-transform px-6 py-4 md:px-8 md:py-7 text-base md:text-lg"
 								>
 									OPEN ACCOUNT
 								</Button>
 								<Button
+									onClick={() => {
+										document
+											.getElementById('history')
+											?.scrollIntoView({ behavior: 'smooth' });
+									}}
 									size="lg"
 									variant="outline"
 									className="border-brand-accent text-brand-accent font-semibold border-2 hover:scale-105 transition-transform px-6 py-4 md:px-8 md:py-7 text-base md:text-lg"
@@ -87,7 +101,10 @@ const AboutUs = () => {
 					</div>
 				</section>
 				{/* Mission statement */}
-				<section className=" mx-auto mb-10 md:mb-16 lg:mb-20 max-w-7xl">
+				<section
+					id="history"
+					className=" mx-auto mb-10 md:mb-16 lg:mb-20 max-w-7xl"
+				>
 					<div className="space-y-4 md:space-y-10">
 						<h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
 							Our Mission & History
@@ -96,16 +113,17 @@ const AboutUs = () => {
 						<div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
 							<div className="space-y-4">
 								<p className="text-base md:text-lg text-brand-primary leading-relaxed">
-									Established 2018, Nova Capital emerged from the belief that
-									the future of asset management lies at the intersection of
-									institutional rigor and digital innovation. We pioneered
-									blockchain-native strategies for small accounts.
+									We started with a simple idea to use technology and data to
+									make financial systems smarter and more efficient. Over time,
+									that idea grew into a focused effort to build adaptive tools
+									and strategies that respond better to changing markets.
 								</p>
 								<p className="text-base md:text-lg text-brand-accent leading-relaxed">
-									Our core philosophy is &quot;Security through
-									Transparency,&quot; ensuring every transaction and allocation
-									is auditable and clear. We combine algorithmic oversight with
-									human judgment to bridge blockchain and traditional finance.
+									Today, our mission is to keep improving how decisions are made
+									in financial environments by combining technology, data, and
+									continuous innovation. We aim to build systems that are
+									practical, reliable, and designed to support steady, long-term
+									growth.
 								</p>
 							</div>
 

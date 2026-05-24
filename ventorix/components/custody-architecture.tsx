@@ -9,7 +9,7 @@ export function CustodyArchitecture() {
 				{/* Image Section - 50% */}
 				<div className="flex-1 flex items-center justify-center">
 					<Image
-						src="/invest.jpg"
+						src="/chart.jpg"
 						alt="Custody Architecture"
 						width={400}
 						height={400}

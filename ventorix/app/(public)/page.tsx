@@ -4,8 +4,16 @@ import Link from 'next/link';
 import { ArrowRight, TrendingUp, Zap } from 'lucide-react';
 import Image from 'next/image';
 import BTCChart from '@/components/charts/btcchart';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+	const router = useRouter();
+	const handleLogin = () => {
+		router.push('/login');
+	};
+	const handleSignup = () => {
+		router.push('/signup');
+	};
 	return (
 		<main className="bg-background items-center justify-center ">
 			<div className="w-full px-4 sm:px-8 lg:px-24 py-8 sm:py-12">
@@ -29,9 +37,9 @@ export default function Home() {
 						</div>
 						{/* Description */}
 						<p className="text-base sm:text-lg leading-relaxed max-w-md text-brand-primary">
-							Access institutional-grade investment portfolios with Nexus
-							Capital. Transparent, high-velocity growth powered by advanced
-							algorithmic trading.
+							Access Premium-grade investment portfolios with Ventorix Capital.
+							Experience transparent, performance-driven growth powered by
+							advanced algorithmic trading strategies.
 						</p>
 						{/* Buttons */}
 						<div className="flex flex-col sm:flex-wrap sm:flex-row gap-3 sm:gap-4 pt-4">
@@ -64,8 +72,9 @@ export default function Home() {
 						Engineered Alpha Strategies
 					</h1>
 					<p className="text-sm sm:text-base md:text-lg text-brand-primary">
-						Our proprietary models leverage institutional datasets to identify
-						market inefficiencies before they&apos;re known to the masses.
+						At Ventorix Capital, we design data-driven investment systems aimed
+						at generating consistent alpha through disciplined risk management,
+						market intelligence, and algorithmic execution.
 					</p>
 				</div>
 			</section>
@@ -87,7 +96,10 @@ export default function Home() {
 								real-time aggregated liquidity.
 							</p>
 						</div>
-						<button className="text-brand-accent font-medium flex items-center gap-1 transition-all hover:scale-105 mt-4 sm:mt-6 text-sm sm:text-base">
+						<button
+							onClick={handleLogin}
+							className="text-brand-accent font-medium flex items-center gap-1 transition-all hover:scale-105 mt-4 sm:mt-6 text-sm sm:text-base"
+						>
 							Explore Returns <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
 						</button>
 					</div>
@@ -98,18 +110,17 @@ export default function Home() {
 							<div className="w-8 h-8 sm:w-10 sm:h-10 bg-accent rounded-full mb-4 sm:mb-6 flex items-center justify-center">
 								<Zap className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
 							</div>
-							<h3 className="text-xl sm:text-2xl font-bold mb-3">Deep Core</h3>
+							<h3 className="text-xl sm:text-2xl font-bold mb-3">
+								Deep Core Intelligence
+							</h3>
 							<p className="text-xs sm:text-sm text-brand-secondary">
-								Deep-seated fundamental tailwinds for steady, compounding
-								returns with minimal volatility. Powered by our in-house
-								research initiative.
+								The foundational system powering our engineered strategies,
+								integrating real-time data, market signals, and risk models to
+								drive consistent, adaptive performance.
 							</p>
 						</div>
 						<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6 sm:mt-8">
-							<span className="text-3xl sm:text-4xl font-bold">6.4%</span>
-							<button className="px-4 py-2 bg-accent text-primary rounded font-medium transition-all hover:scale-105 w-full sm:w-auto">
-								View Analysis
-							</button>
+							<span className="text-3xl sm:text-4xl font-bold">8.4%</span>
 						</div>
 					</div>
 
@@ -124,7 +135,10 @@ export default function Home() {
 								finance.
 							</p>
 						</div>
-						<button className="px-4 sm:px-6 py-2 sm:py-3 border-2 border-brand-accent text-brand-accent transition-all hover:scale-105 rounded font-medium w-full mt-4 sm:mt-6 text-sm sm:text-base">
+						<button
+							onClick={handleLogin}
+							className="px-4 sm:px-6 py-2 sm:py-3 border-2 border-brand-accent text-brand-accent transition-all hover:scale-105 rounded font-medium w-full mt-4 sm:mt-6 text-sm sm:text-base"
+						>
 							Unlock Data
 						</button>
 					</div>
@@ -140,10 +154,13 @@ export default function Home() {
 								Pioneering Digital Wealth
 							</h2>
 							<p className="text-sm sm:text-base md:text-lg text-brand-primary mb-6 sm:mb-8">
-								Versed Counsel assures in the forefront of established-group
-								digital assets. Leverage both our institutional-grade technology
-								and proprietary research to access emerging opportunities that
-								institutional allocators have been searching for.
+								Pioneering digital wealth through advanced, data-driven
+								financial systems designed to transform how capital is grown and
+								managed in modern markets. By combining intelligent technology,
+								structured strategies, and real-time market insights, this
+								approach focuses on creating sustainable growth, improved
+								efficiency, and more informed financial decisions in an
+								increasingly dynamic global economy.
 							</p>
 							<Link
 								className="px-4 sm:px-6 py-2 sm:py-3 border-2 border-brand-accent text-brand-accent rounded font-bold hover:scale-105 transition text-sm sm:text-base"
@@ -178,12 +195,12 @@ export default function Home() {
 								99
 							</p>
 							<p className="text-xs sm:text-sm text-muted-foreground">
-								&quot;Focus on institutional-level set approach. With our
-								advanced management algorithms and execution.&quot;
+								&quot;Focus on premium-level set approach. With our advanced
+								management algorithms and execution.&quot;
 							</p>
 							<div className="flex items-center gap-3 mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-border">
 								<Image
-									src="/invest.jpg"
+									src="/portfolio.jpg"
 									alt="Mariana Chen"
 									width={40}
 									height={40}
@@ -209,7 +226,7 @@ export default function Home() {
 							</p>
 							<div className="flex items-center gap-3 mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-700">
 								<Image
-									src="/invest.jpg"
+									src="/chiefinvestment.jpg"
 									alt="Alex Jordan"
 									width={40}
 									height={40}
@@ -235,7 +252,7 @@ export default function Home() {
 							</p>
 							<div className="flex items-center gap-3 mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-border">
 								<Image
-									src="/invest.jpg"
+									src="/linkedin-wealth.jpg"
 									alt="Sofia Rodriguez"
 									width={40}
 									height={40}
@@ -265,10 +282,10 @@ export default function Home() {
 								A Frictionless Bridge to Prime Liquidity
 							</h2>
 							<p className="text-sm sm:text-base md:text-lg text-brand-primary max-w-2xl">
-								We are orchestrated to carry the entire financial models in
-								untrue financial services, bringing together market data,
-								algorithms, analytics, and opportunities as a unified
-								integrated.
+								We provide seamless access to high-quality liquidity
+								environments through advanced execution systems designed to
+								reduce friction, enhance efficiency, and ensure optimal market
+								connectivity across global financial networks.
 							</p>
 						</div>
 
@@ -342,8 +359,8 @@ export default function Home() {
 								Data Deployment
 							</h3>
 							<p className="text-xs sm:text-sm text-brand-secondary">
-								Select your preferred data strategies in minutes, executable
-								24/7.
+								Seamless data deployment powered by intelligent systems for
+								fast, continuous execution.
 							</p>
 						</div>
 

@@ -7,25 +7,25 @@ const team = [
 		name: 'Marcus Vance',
 		title: 'Chief Managing Director',
 		bio: 'Stanford, 20+ years in quantitative finance and digital assets.',
-		image: '/invest.jpg',
+		image: '/managingdir.jpeg',
 	},
 	{
 		name: 'Dr. Elena Bobkova',
 		title: 'Chief Strategy Officer',
 		bio: 'MIT, PhD in Computational Finance. Former Head of Trading.',
-		image: '/invest.jpg',
+		image: '/strategy.jpeg',
 	},
 	{
-		name: 'Jameson Kiay',
+		name: 'Susan Wojcicki',
+		title: 'Head Brand Ambassador',
+		bio: 'Specialized in brand promotion and audience engagment',
+		image: '/complience.jpeg',
+	},
+	{
+		name: 'John Colasanti',
 		title: 'Chief Technology Officer',
 		bio: 'Carnegie Mellon, 15 years building scalable crypto infrastructure.',
-		image: '/invest.jpg',
-	},
-	{
-		name: 'Sarah Chen',
-		title: 'Chief Compliance Officer',
-		bio: 'Harvard, Specialized in digital asset regulation and compliance.',
-		image: '/invest.jpg',
+		image: '/tech.jpg',
 	},
 ];
 

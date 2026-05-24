@@ -59,8 +59,8 @@ export default function Plans() {
 
 					<p className="mx-auto mt-4 max-w-3xl text-balance text-brand-primary text-sm sm:text-base md:text-lg lg:text-xl">
 						Precision-engineered capital allocation strategies tailored for
-						institutional funders and retail velocity. Choose your entry point
-						risk basis.
+						Premium funders and retail velocity. Choose your entry point risk
+						basis.
 					</p>
 				</div>
 
