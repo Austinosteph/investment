@@ -5,7 +5,7 @@ export default function LoginPage() {
 	return (
 		<div className="min-h-screen flex flex-col lg:flex-row">
 			{/* Image - Full width on mobile/tablet, 50% on desktop */}
-			<div className="w-full lg:w-1/2 min-h-[40vh] lg:min-h-screen bg-amber-900 relative hidden lg:flex">
+			<div className="w-full lg:w-1/2 min-h-[40vh] lg:min-h-screen relative hidden lg:flex">
 				<Image
 					src="/invest.jpg"
 					alt="Investment illustration"

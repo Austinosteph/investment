@@ -1,3 +1,4 @@
+import Footer from '@/components/footer';
 import AuthNavbar from '@/components/navbars/AuthNavbar';
 
 export default function RootLayout({
@@ -9,6 +10,9 @@ export default function RootLayout({
 		<>
 			<AuthNavbar />
 			{children}
+			<div className="lg:hidden">
+				<Footer />
+			</div>
 		</>
 	);
 }
