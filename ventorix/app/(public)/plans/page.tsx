@@ -1,5 +1,6 @@
 import { PricingCard } from '@/components/pricing-card';
 import { CustodyArchitecture } from '@/components/custody-architecture';
+import { PortfolioTable } from '@/components/portfolio-table';
 
 const tiers = [
 	{
@@ -52,6 +53,7 @@ export default function Plans() {
 		<main className="min-h-screen bg-background">
 			<div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:py-20">
 				{/* Header Section */}
+
 				<div className="text-center">
 					<h1 className="text-3xl font-bold text-brand-primary sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
 						<span className="text-balance">Investment Tiers</span>
@@ -65,7 +67,7 @@ export default function Plans() {
 				</div>
 
 				{/* Pricing Cards */}
-				<div className="mt-12 grid gap-6 sm:gap-8 md:mt-16 lg:grid-cols-3 xl:gap-10">
+				<div className="mt-12 grid gap-6 sm:gap-8 md:mt-16 lg:grid-cols-3 xl:gap-10 mb-10 md:mb-10 lg:mb-20">
 					{tiers.map((tier, index) => (
 						<PricingCard
 							key={index}
@@ -79,6 +81,7 @@ export default function Plans() {
 						/>
 					))}
 				</div>
+				<PortfolioTable />
 
 				{/* Custody Architecture */}
 				<CustodyArchitecture />

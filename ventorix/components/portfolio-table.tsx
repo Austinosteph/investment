@@ -35,7 +35,7 @@ export function PortfolioTable() {
 	}, []);
 
 	return (
-		<div className="w-full rounded-lg border border-brand-primary overflow-hidden shadow-lg shadow-brand-primary bg-white">
+		<div className="w-full rounded-lg border border-brand-primary overflow-hidden shadow-lg shadow-brand-primary bg-background">
 			{/* HEADER */}
 			<div className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 border-b border-brand-primary">
 				<h3 className="text-sm sm:text-base lg:text-lg font-semibold text-black">

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export function CustodyArchitecture() {
 	return (
-		<div className="mt-16 sm:mt-20 md:mt-24 rounded-2xl border border-brand-primary bg-brand-primary/10 p-6 sm:p-8 md:p-12">
+		<div className="mt-10 md:mt-16 rounded-2xl border border-brand-primary bg-brand-primary/10 p-6 sm:p-8 md:p-12">
 			<div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
 				{/* Image Section - 50% */}
 				<div className="flex-1 flex items-center justify-center">
