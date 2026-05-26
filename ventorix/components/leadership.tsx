@@ -45,7 +45,7 @@ export function Leadership() {
 									src={member.image}
 									alt={member.name}
 									fill
-									className="object-cover"
+									className="object-center"
 								/>
 								<div className="absolute inset-0 flex items-end justify-start p-3 md:p-4">
 									<div className="space-y-1 bg-brand-primary p-2 md:p-3">

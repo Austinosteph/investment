@@ -12,7 +12,7 @@ export function MarketSentimentCard() {
 
 				{/* Progress bar */}
 				<div className="w-full h-2 md:h-3 bg-gray-100 rounded-full overflow-hidden mb-4 md:mb-6">
-					<div className="h-full bg-green-800" style={{ width: '88%' }}></div>
+					<div className="h-full bg-green-800" style={{ width: '78%' }}></div>
 				</div>
 
 				{/* Labels */}
@@ -25,7 +25,7 @@ export function MarketSentimentCard() {
 
 			<div className="text-right">
 				<div className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-800">
-					88%
+					78%
 				</div>
 			</div>
 		</div>

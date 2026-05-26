@@ -17,9 +17,9 @@ interface VelocityItem {
 }
 
 const data: VelocityItem[] = [
-	{ name: 'Modern Markets', value: 12.6, label: '+12.6%' },
-	{ name: 'Asia Pacific Rate', value: 108.2, label: '+108.2%' },
-	{ name: 'Institutional OTC', value: 15.9, label: '+15.9%' },
+	{ name: 'Asia-Pacific Flow', value: 38.2, label: '+38.2%' },
+	{ name: 'Global Markets', value: 72.6, label: '+72.6%' },
+	{ name: 'Institutional OTC Volume', value: 10.9, label: '+10.9%' },
 ];
 
 export function InvestmentVelocity() {
@@ -27,11 +27,11 @@ export function InvestmentVelocity() {
 		<div className="bg-brand-primary rounded-lg p-8 w-full">
 			<div className="mb-6">
 				<h3 className="text-xl font-semibold text-white mb-2">
-					Investment Velocity
+					INVESTMENT VELOCITY
 				</h3>
 				<p className="text-sm text-brand-secondary">
-					Visualizing global allocation speed across decentralized networks over
-					the last 24H
+					Visualizing global capital allocation speed across decentralized
+					networks over the last 24 hours.
 				</p>
 			</div>
 

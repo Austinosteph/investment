@@ -1,99 +1,66 @@
-interface AssetItem {
-	symbol: string;
-	pair: string;
-	price: string;
-	change: string;
-	isPositive: boolean;
-}
+'use client';
 
-const assets: AssetItem[] = [
-	{
-		symbol: 'BTC',
-		pair: 'BTC/USD',
-		price: '$64,289.42',
-		change: '+2.61%',
-		isPositive: true,
-	},
-	{
-		symbol: 'ETH',
-		pair: 'ETH/USD',
-		price: '$3,412.18',
-		change: '+8.5%',
-		isPositive: true,
-	},
-	{
-		symbol: 'SOL',
-		pair: 'SOL/USD',
-		price: '$148.92',
-		change: '+9.12%',
-		isPositive: true,
-	},
-	{
-		symbol: 'NXTO',
-		pair: 'NXTO/USD',
-		price: '$1,024.12',
-		change: '+3.78%',
-		isPositive: true,
-	},
-];
+import { useEffect, useRef } from 'react';
 
 export function PortfolioTable() {
+	const containerRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		if (!containerRef.current) return;
+
+		containerRef.current.innerHTML = '';
+
+		const script = document.createElement('script');
+		script.src =
+			'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
+		script.async = true;
+
+		script.type = 'text/javascript';
+
+		script.innerHTML = JSON.stringify({
+			symbols: [
+				{
+					proName: 'BINANCE:BTCUSDT',
+					title: 'BTC',
+				},
+				{
+					proName: 'BINANCE:ETHUSDT',
+					title: 'ETH',
+				},
+				{
+					proName: 'BINANCE:BNBUSDT',
+					title: 'BNB',
+				},
+				{
+					proName: 'BINANCE:SOLUSDT',
+					title: 'SOL',
+				},
+			],
+			showSymbolLogo: true,
+			isTransparent: false,
+			displayMode: 'adaptive',
+			colorTheme: 'light',
+			locale: 'en',
+		});
+
+		containerRef.current.appendChild(script);
+	}, []);
+
 	return (
-		<div className=" rounded-lg border border-brand-primary shadow-md shadow-brand-primary overflow-hidden">
-			<div className="px-8 py-6 border-b border-gray-300">
-				<h3 className="text-lg font-semibold text-black">
+		<div className="w-full rounded-lg border border-brand-primary overflow-hidden shadow-lg shadow-brand-primary">
+			{/* Header (your UI stays) */}
+			<div className="px-4 sm:px-6 lg:px-8 py-4 border-b border-brand-primary">
+				<h3 className="text-base sm:text-lg font-semibold text-black">
 					Global Portfolio Assets
 				</h3>
-				<p className="text-sm text-brand-primary mt-1">Modified 2 min ago</p>
+				<p className="text-xs sm:text-sm text-brand-primary mt-1">
+					Live Market Data (TradingView Feed)
+				</p>
 			</div>
 
-			<div className="overflow-x-auto">
-				<table className="w-full">
-					<thead>
-						<tr className="border-b border-gray-200 bg-brand-primary/15">
-							<th className="px-8 py-4 text-left text-xs font-semibold text-black uppercase tracking-wide">
-								Asset Name
-							</th>
-							<th className="px-8 py-4 text-left text-xs font-semibold text-black uppercase tracking-wide">
-								Identifier
-							</th>
-							<th className="px-8 py-4 text-left text-xs font-semibold text-black uppercase tracking-wide">
-								Market Price
-							</th>
-							<th className="px-8 py-4 text-left text-xs font-semibold text-black uppercase tracking-wide">
-								24H Performance
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						{assets.map((asset, i) => (
-							<tr
-								key={i}
-								className={i % 2 === 0 ? 'bg-white' : 'bg-brand-primary/15'}
-							>
-								<td className="px-8 py-4">
-									<div className="flex items-center gap-3">
-										<div className="w-8 h-8 rounded-full bg-brand-primary text-white flex items-center justify-center text-xs font-bold">
-											{asset.symbol[0]}
-										</div>
-										<span className="font-medium text-brand-primary">
-											{asset.symbol}
-										</span>
-									</div>
-								</td>
-								<td className="px-8 py-4 text-brand-primary">{asset.pair}</td>
-								<td className="px-8 py-4 font-semibold text-black">
-									{asset.price}
-								</td>
-								<td className="px-8 py-4">
-									<span className="text-green-700 font-semibold">
-										{asset.change}
-									</span>
-								</td>
-							</tr>
-						))}
-					</tbody>
-				</table>
+			{/* TradingView Ticker */}
+			<div className="w-full overflow-hidden">
+				<div ref={containerRef} />
 			</div>
 		</div>
 	);
