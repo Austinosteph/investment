@@ -4,9 +4,13 @@ import Link from 'next/link';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { useUser } from '@clerk/nextjs';
 
 export function DashboardNav() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const { user, isLoaded } = useUser();
+
+	if (!isLoaded) return null;
 
 	return (
 		<>
@@ -23,12 +27,12 @@ export function DashboardNav() {
 					{/* Right section - User avatar and mobile menu */}
 					<div className="flex items-center gap-4">
 						{/* Desktop Avatar - Hidden on mobile */}
-						<Link href="/profile" className="hidden sm:block">
+						<div className="hidden sm:block">
 							<Avatar className="h-8 w-8">
-								<AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex" />
+								<AvatarImage src={user?.imageUrl} />
 								<AvatarFallback>AR</AvatarFallback>
 							</Avatar>
-						</Link>
+						</div>
 
 						{/* Mobile Menu Toggle */}
 						<button
@@ -77,17 +81,24 @@ export function DashboardNav() {
 						>
 							TRANSACTIONS
 						</Link>
-
-						{/* Mobile Avatar */}
 						<Link
 							href="/profile"
-							className="sm:hidden	onClick={() => setIsMobileMenuOpen(false)}"
+							className="text-brand-primary hover:scale-105 transition-all text-sm font-bold"
+							onClick={() => setIsMobileMenuOpen(false)}
+						>
+							PROFILE
+						</Link>
+
+						{/* Mobile Avatar */}
+						<div
+							className="sm:hidden"
+							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							<Avatar className="h-8 w-8">
-								<AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex" />
+								<AvatarImage src={user?.imageUrl} />
 								<AvatarFallback>AR</AvatarFallback>
 							</Avatar>
-						</Link>
+						</div>
 					</div>
 				</div>
 			)}

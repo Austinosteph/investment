@@ -6,8 +6,11 @@ import { DashboardNav } from '@/components/navbars/DashboardNav';
 import { RecentActivity } from '@/components/recent-activity';
 import { Eye, ChartNoAxesCombined } from 'lucide-react';
 import Footer from '@/components/footer';
+import { useUser } from '@clerk/nextjs';
 
 export default function Dashboard() {
+	const { user, isLoaded } = useUser();
+	if (!isLoaded) return null;
 	return (
 		<>
 			<DashboardNav />
@@ -18,7 +21,7 @@ export default function Dashboard() {
 					<div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 lg:gap-0">
 						<div className="mb-4 sm:mb-6 lg:mb-8">
 							<h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black">
-								Welcome back, Alex.
+								Welcome back, {user?.lastName || 'User'}.
 							</h1>
 							<p className="text-brand-primary text-xs sm:text-sm md:text-base">
 								Your portfolio performance is up 12.4% this quarter.

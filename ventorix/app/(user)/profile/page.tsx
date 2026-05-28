@@ -6,8 +6,11 @@ import { Badge } from '@/components/ui/badge';
 import { Edit2, TrendingUp, Heart } from 'lucide-react';
 import Footer from '@/components/footer';
 import Image from 'next/image';
+import { useUser } from '@clerk/nextjs';
 
 export default function ProfileDashboard() {
+	const { user, isLoaded } = useUser();
+	if (!isLoaded) return null;
 	return (
 		<>
 			{' '}
@@ -20,32 +23,22 @@ export default function ProfileDashboard() {
 						<Card className="md:col-span-2 bg-brand-primary border-border p-6">
 							<div className=" gap-4">
 								<div className="flex flex-row gap-4">
-									<Image
-										src="/invest.jpg"
-										alt="Alex Rivers"
-										width={80}
-										height={80}
+									<img
+										src={user?.imageUrl}
+										alt="profile"
 										className="w-20 h-20 rounded-lg object-cover"
 									/>
-									<div className="flex items-center flex-col md:flex-row gap-2 mb-2">
+									<div className="flex items-center flex-col md:flex-row gap-10 mb-2">
 										<h1 className="text-2xl font-bold text-white">
-											Alex Rivers
+											{user?.firstName} {user?.lastName}
 										</h1>
-										<Badge className="text-brand-secondary text-xs font-semibold">
-											AUTHORIZED
-										</Badge>
+										<div className="rounded-full bg-green-600 w-3 h-3 shadow-md shadow-brand-primary" />
 									</div>
 								</div>
 								<div className="mt-4">
 									<p className="text-sm text-brand-secondary mb-3">
-										Wealth ID: NC-4820-0016 • Verified Member since 2019
+										Wealth ID: {user?.id}
 									</p>
-									<div className="flex gap-3">
-										<button className="flex items-center gap-2 text-brand-secondary hover:text-accent-foreground transition-colors">
-											<Edit2 className="w-4 h-4" />
-											<span className="text-sm font-medium ">Edit Profile</span>
-										</button>
-									</div>
 								</div>
 							</div>
 						</Card>

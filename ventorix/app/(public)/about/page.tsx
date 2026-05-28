@@ -40,7 +40,7 @@ const AboutUs = () => {
 	const router = useRouter();
 
 	const handleSignup = () => {
-		router.push('/signup');
+		router.push('/sign-up');
 	};
 	return (
 		<div>

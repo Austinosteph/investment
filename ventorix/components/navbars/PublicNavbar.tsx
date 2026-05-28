@@ -53,13 +53,13 @@ export const PublicNavbar = () => {
 			<div className="flex gap-2 sm:gap-4 text-brand-primary text-sm sm:text-base items-center">
 				<Link
 					className="hidden font-bold md:block transition-all hover:scale-105"
-					href="/login"
+					href="/sign-in"
 				>
 					Login
 				</Link>
 				<Link
 					className="bg-brand-primary transition-all hover:scale-105 text-brand-secondary text-xs sm:text-base px-2 sm:px-3 py-1 sm:py-1.5 border border-brand-primary font-bold rounded-lg"
-					href="/signup"
+					href="/sign-up"
 				>
 					Signup
 				</Link>
@@ -92,7 +92,7 @@ export const PublicNavbar = () => {
 						</Link>
 						<Link
 							className="text-brand-primary font-bold transition-all hover:scale-105 py-2 text-sm sm:text-base"
-							href="/login"
+							href="/sign-in"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							Login

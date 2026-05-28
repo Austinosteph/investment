@@ -28,7 +28,7 @@ export function ArticleSection() {
 			</p>
 
 			<Link
-				href="/signup"
+				href="/sign-up"
 				className="w-full text-center sm:w-auto px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-all hover:shadow-lg hover:scale-105 bg-brand-primary text-brand-secondary"
 			>
 				Start Investing

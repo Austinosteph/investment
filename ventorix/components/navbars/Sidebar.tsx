@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import { useClerk, useUser } from '@clerk/nextjs';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -9,6 +11,7 @@ import {
 	Activity,
 	History,
 	LogOut,
+	User,
 } from 'lucide-react';
 
 const menuItems = [
@@ -33,10 +36,18 @@ const menuItems = [
 		href: '/transactions',
 		icon: History,
 	},
+	{
+		name: 'Profile',
+		href: '/profile',
+		icon: User,
+	},
 ];
 
 export function Sidebar() {
 	const pathname = usePathname();
+	const { signOut } = useClerk();
+	const { user, isLoaded } = useUser();
+	if (!isLoaded) return null;
 
 	return (
 		<aside className="bg-brand-primary w-48 h-screen border-r border-brand-navdark p-4 flex flex-col">
@@ -47,11 +58,10 @@ export function Sidebar() {
 
 			{/* User Info */}
 			<div className="mb-8 p-3 rounded-lg bg-brand-secondary/75">
-				<div className="text-sm font-semibold text-black">Alex Rivers</div>
-				<div className="text-xs text-brand-primary uppercase">
-					INSTITUTIONAL
+				<div className="text-sm font-semibold text-black mb-2.5">
+					{user?.firstName} {user?.lastName}
 				</div>
-				<div className="text-xs text-brand-primary uppercase">TIER</div>
+				<div className="text-xs text-brand-primary uppercase">PREMIUM TIER</div>
 			</div>
 
 			{/* Navigation Menu */}
@@ -79,10 +89,13 @@ export function Sidebar() {
 
 			{/* Footer - Always at bottom */}
 			<div className="border-t border-neutral-800 pt-4 mt-auto text-xs text-brand-secondary hover:scale-105">
-				<div className="text-center flex justify-center gap-4">
+				<button
+					onClick={() => signOut()}
+					className="text-center flex justify-center gap-4"
+				>
 					<LogOut className="w-4 h-4" />
 					<span>Sign Out</span>
-				</div>
+				</button>
 			</div>
 		</aside>
 	);

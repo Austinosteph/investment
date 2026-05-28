@@ -87,7 +87,7 @@ export function PricingCard({
 
 			<button
 				onClick={() => {
-					router.push('/login');
+					router.push('/sign-in');
 				}}
 				className={`mt-6 sm:mt-8 w-full rounded-full border-2 py-3 font-bold uppercase tracking-wider transition-all duration-300 ${
 					accentColor === 'yellow'

@@ -9,10 +9,10 @@ import { useRouter } from 'next/navigation';
 export default function Home() {
 	const router = useRouter();
 	const handleLogin = () => {
-		router.push('/login');
+		router.push('/sign-in');
 	};
 	const handleSignup = () => {
-		router.push('/signup');
+		router.push('/sign-up');
 	};
 	return (
 		<main className="bg-background items-center justify-center ">
@@ -44,13 +44,13 @@ export default function Home() {
 						{/* Buttons */}
 						<div className="flex flex-col sm:flex-wrap sm:flex-row gap-3 sm:gap-4 pt-4">
 							<Link
-								href="/signup"
+								href="/sign-up"
 								className="w-full text-center sm:w-auto px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-all hover:shadow-lg hover:scale-105 bg-brand-primary text-brand-secondary"
 							>
 								Start Investing
 							</Link>
 							<Link
-								href="/login"
+								href="/sign-in"
 								className="w-full text-center sm:w-auto px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-all hover:scale-105 text-brand-accent border-2	 border-brand-accent"
 							>
 								Login
