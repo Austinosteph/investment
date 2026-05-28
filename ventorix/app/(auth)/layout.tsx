@@ -1,4 +1,4 @@
-import Footer from '@/components/footer';
+import FooterAuth from '@/components/footerauth';
 import AuthNavbar from '@/components/navbars/AuthNavbar';
 
 export default function RootLayout({
@@ -7,12 +7,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<>
+		<div className="min-h-screen flex flex-col">
 			<AuthNavbar />
-			{children}
-			<div className="lg:hidden">
-				<Footer />
-			</div>
-		</>
+			<main className="flex-1">{children}</main>
+
+			<FooterAuth />
+		</div>
 	);
 }
