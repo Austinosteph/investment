@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, LogOut } from 'lucide-react';
 import { useState } from 'react';
-import { useUser } from '@clerk/nextjs';
+import { useUser, useClerk } from '@clerk/nextjs';
 
 export function DashboardNav() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const { user, isLoaded } = useUser();
+	const { signOut } = useClerk();
 
 	if (!isLoaded) return null;
 
@@ -26,9 +27,8 @@ export function DashboardNav() {
 
 					{/* Right section - User avatar and mobile menu */}
 					<div className="flex items-center gap-4">
-						{/* Desktop Avatar - Hidden on mobile */}
-						<div className="hidden sm:block">
-							<Avatar className="h-8 w-8">
+						<div className="">
+							<Avatar className="w-6 h-6 sm:h-8 sm:w-8">
 								<AvatarImage src={user?.imageUrl} />
 								<AvatarFallback>AR</AvatarFallback>
 							</Avatar>
@@ -91,13 +91,18 @@ export function DashboardNav() {
 
 						{/* Mobile Avatar */}
 						<div
-							className="sm:hidden"
+							className="sm:hidden flex items-center gap-2 justify-between mt-4 border-t p-2"
 							onClick={() => setIsMobileMenuOpen(false)}
 						>
-							<Avatar className="h-8 w-8">
-								<AvatarImage src={user?.imageUrl} />
-								<AvatarFallback>AR</AvatarFallback>
-							</Avatar>
+							<button
+								onClick={() => signOut()}
+								className="flex gap-2 items-center"
+							>
+								<LogOut className="w-4 h-4" />
+								<span className="text-brand-primary hover:scale-105 transition-all text-sm font-bold p-2">
+									SIGN OUT
+								</span>
+							</button>
 						</div>
 					</div>
 				</div>

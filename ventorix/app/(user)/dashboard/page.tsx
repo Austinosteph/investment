@@ -19,7 +19,7 @@ export default function Dashboard() {
 				<div className="max-w-7xl mx-auto mb-12 sm:mb-16">
 					{/* Welcome Section */}
 					<div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 lg:gap-0">
-						<div className="mb-4 sm:mb-6 lg:mb-8">
+						<div className="mb-0 lg:mb-8">
 							<h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black">
 								Welcome back, {user?.lastName || 'User'}.
 							</h1>
